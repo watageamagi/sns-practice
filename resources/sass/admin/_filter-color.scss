@@ -1,0 +1,54 @@
+.filter-color-list,
+.filter-size-list {
+  margin-bottom: 15px;
+}
+
+.filter-color-list:after,
+.filter-size-list:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.filter-color-list li,
+.filter-size-list li {
+  float: left;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.filter-color-list li .filter-color,
+.filter-color-list li .filter-size,
+.filter-size-list li .filter-color,
+.filter-size-list li .filter-size {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  border: 1px solid #dfdfdf;
+  margin: 0;
+  box-shadow: inset 0 0 0 3px #fff;
+  transition: border 0.3s;
+}
+
+.filter-color-list li:hover .filter-color,
+.filter-color-list li:hover .filter-size,
+.filter-size-list li:hover .filter-color,
+.filter-size-list li:hover .filter-size {
+  border-color: #a4abae;
+}
+
+.filter-color-list li.active .filter-color,
+.filter-color-list li.active .filter-size,
+.filter-size-list li.active .filter-color,
+.filter-size-list li.active .filter-size {
+  border-color: #262634;
+}
+
+.filter-size-list li .filter-size {
+  color: #000;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  font: 700 12px/31px "Oswald", sans-serif;
+  text-transform: uppercase;
+}

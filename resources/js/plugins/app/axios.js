@@ -1,0 +1,30 @@
+import axios from 'axios'
+// import router from '~/router'
+
+
+window.axios = axios
+
+axios.interceptors.request.use(request => {
+
+    if (auth.check()) {
+        const token = auth.token
+        request.headers.common['Authorization'] = `Bearer ${token}`
+    }
+
+    return request
+})
+
+axios.interceptors.response.use(response => response, error => {
+        const { status } = error.response
+
+        if (status === 401 && auth.check()) {
+            router.push({ name: 'login' })
+        }
+
+        if (status >= 500) {
+        }
+
+        return Promise.reject(error)
+    }
+)
+

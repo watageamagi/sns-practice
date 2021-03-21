@@ -1,0 +1,22 @@
+.page-enter-active, .page-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
+
+._treeview {
+  margin-bottom: 15px;
+}
+
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active, .list-leave-active {
+  transition: all .5s;
+}
+.list-enter, .list-leave-to  {
+  opacity: 0;
+  transform: translateY(10px);
+}

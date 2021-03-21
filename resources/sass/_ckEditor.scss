@@ -1,0 +1,65 @@
+
+.ckEditor__view {
+    word-break: break-all;
+
+    //画像
+    figure.image {
+        display: table;
+        clear: both;
+        text-align: center;
+        margin: 1em auto;
+        max-width: 100%;
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    //画像（右寄せ）
+    figure.image.image-style-align-right {
+        float: right;
+        margin-left: 1rem;
+    }
+
+    //画像（右寄せ）
+    figure.image.image-style-align-center {
+    }
+
+    //画像（左寄せ）
+    figure.image.image-style-align-left {
+        float: left;
+        margin-right: 1rem;
+    }
+
+
+    //
+    blockquote {
+        overflow: hidden;
+        margin: 1.5em 0;
+        padding: .5em 0;
+        font-style: italic;
+        border-left: 5px solid #ccc;
+        background: #fff;
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    //テーブル
+    table {
+        width: 100%;
+        thead {
+            th {
+                font-weight: 700;
+                background: hsla(0,0%,0%,5%);
+                min-width: 2em;
+                border: 1px solid #bfbfbf;
+            }
+        }
+        td,th {
+            border: 1px solid #bfbfbf;
+        }
+    }
+
+
+}
